@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Central and State Online Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+ <div id="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-page">
+            <div class="welcome-content">
+                <h2>CSC</h2>
+                <h2>VA SERVICES</h2>
+                <h3>DIGITAL SEVA</h3>
+            </div>
+        </section>
+    </div>
+
+  <section id="central-state" class="services">
+    <div class="container">
+        <h2>Central and State Online Services</h2>
+        <input type="text" id="search-bar" onkeyup="filterServices()" placeholder="Search for services...">
+        <div class="service-buttons">
+            <button onclick="window.location.href='central-and-state-services-details/aadhaar-services.html';">Aadhaar Services</button>
+            <button onclick="window.location.href='central-and-state-services-details/pan-card.html';">Pan Card</button>
+            <button onclick="window.location.href='central-and-state-services-details/passport.html';">Passport</button>
+            <button onclick="window.location.href='central-and-state-services-details/voter-id.html';">Voter ID</button>
+            <button onclick="window.location.href='central-and-state-services-details/ration-card.html';">Ration Card</button>
+            <button onclick="window.location.href='central-and-state-services-details/banking-services.html';">Banking Services</button>
+            <button onclick="window.location.href='central-and-state-services-details/msme-udhyam-certificate.html';">MSME Udhyam Certificate</button>
+            <button onclick="window.location.href='central-and-state-services-details/nps.html';">NPS (National Pension Scheme)</button>
+            <button onclick="window.location.href='central-and-state-services-details/pensions.html';">All Type Pensions</button>
+            <button onclick="window.location.href='central-and-state-services-details/jeevan-praman-life-certificate.html';">Jeevan Praman Life Certificate</button>
+            <button onclick="window.location.href='central-and-state-services-details/rto-services.html';">RTO Services</button>
+            <button onclick="window.location.href='central-and-state-services-details/police-department.html';">Police Department Services and Job Verification Applications</button>
+            <button onclick="window.location.href='central-and-state-services-details/health-card.html';">Health Card / ABHA Card</button>
+            <button onclick="window.location.href='central-and-state-services-details/revenue-department.html';">Revenue Department Services</button>
+            <button onclick="window.location.href='central-and-state-services-details/gruha-lakshmi-kyc.html';">Gruha Lakshmi / KYC</button>
+            <button onclick="window.location.href='central-and-state-services-details/eshram-card.html';">Eshram Card</button>
+            <button onclick="window.location.href='central-and-state-services-details/rtc-mr.html';">RTC / MR</button>
+            <button onclick="window.location.href='central-and-state-services-details/income-caste-certificate.html';">Income and Caste Certificate</button>
+            <button onclick="window.location.href='central-and-state-services-details/pm-kissan.html';">PM Kissan</button>
+            <button onclick="window.location.href='central-and-state-services-details/flight-tickets.html';">Flight Tickets</button>
+            <button onclick="window.location.href='central-and-state-services-details/e-stamp.html';">E-Stamp</button>
+            <button onclick="window.location.href='central-and-state-services-details/labour-card.html';">Labour Card</button>
+            <button onclick="window.location.href='central-and-state-services-details/pf-services.html';">PF Services</button>
+        </div>
+    </div>
+</section>
+
+
+
+    <script>
+        // JavaScript function to filter services
+        function filterServices() {
+            const input = document.getElementById('search-bar');
+            const filter = input.value.toLowerCase();
+            const serviceButtons = document.querySelectorAll('#central-state .service-buttons button');
+
+            serviceButtons.forEach(button => {
+                const buttonText = button.innerText.toLowerCase();
+                button.style.display = buttonText.includes(filter) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
